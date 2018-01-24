@@ -1250,6 +1250,16 @@ var _react = require(12     ); // 12 = react
 
 var _react2 = babelHelpers.interopRequireDefault(_react);
 
+var _topo = require(423                    ); // 423 = ./src/components/topo
+
+var _topo2 = babelHelpers.interopRequireDefault(_topo);
+
+var _icone = require(424                     ); // 424 = ./src/components/icone
+
+var _icone2 = babelHelpers.interopRequireDefault(_icone);
+
+var _estilo = require(425                  ); // 425 = ./src/styles/estilo
+
 var _reactNative = require(45            ); // 45 = react-native
 
 var appUdemy03 = function (_Component) {
@@ -1288,47 +1298,32 @@ var appUdemy03 = function (_Component) {
         {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 40
+            lineNumber: 43
           }
         },
-        _react2.default.createElement(Topo, {
+        _react2.default.createElement(_topo2.default, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 41
+            lineNumber: 44
           }
         }),
         _react2.default.createElement(
           _reactNative.View,
-          { style: styles.painelAcao, __source: {
+          { style: _estilo.Estilo.painelAcao, __source: {
               fileName: _jsxFileName,
-              lineNumber: 42
+              lineNumber: 45
             }
           },
           _react2.default.createElement(
             _reactNative.View,
-            { style: styles.btnEscolha, __source: {
-                fileName: _jsxFileName,
-                lineNumber: 43
-              }
-            },
-            _react2.default.createElement(_reactNative.Button, { onPress: function onPress() {
-                _this2.jokenpo('0');
-              }, title: 'Pedra', __source: {
-                fileName: _jsxFileName,
-                lineNumber: 44
-              }
-            })
-          ),
-          _react2.default.createElement(
-            _reactNative.View,
-            { style: styles.btnEscolha, __source: {
+            { style: _estilo.Estilo.btnEscolha, __source: {
                 fileName: _jsxFileName,
                 lineNumber: 46
               }
             },
             _react2.default.createElement(_reactNative.Button, { onPress: function onPress() {
-                _this2.jokenpo('1');
-              }, title: 'Papel', __source: {
+                _this2.jokenpo('0');
+              }, title: 'Pedra', __source: {
                 fileName: _jsxFileName,
                 lineNumber: 47
               }
@@ -1336,43 +1331,58 @@ var appUdemy03 = function (_Component) {
           ),
           _react2.default.createElement(
             _reactNative.View,
-            { style: styles.btnEscolha, __source: {
+            { style: _estilo.Estilo.btnEscolha, __source: {
                 fileName: _jsxFileName,
                 lineNumber: 49
+              }
+            },
+            _react2.default.createElement(_reactNative.Button, { onPress: function onPress() {
+                _this2.jokenpo('1');
+              }, title: 'Papel', __source: {
+                fileName: _jsxFileName,
+                lineNumber: 50
+              }
+            })
+          ),
+          _react2.default.createElement(
+            _reactNative.View,
+            { style: _estilo.Estilo.btnEscolha, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 52
               }
             },
             _react2.default.createElement(_reactNative.Button, { onPress: function onPress() {
                 _this2.jokenpo('2');
               }, title: 'Tesoura', __source: {
                 fileName: _jsxFileName,
-                lineNumber: 50
+                lineNumber: 53
               }
             })
           )
         ),
         _react2.default.createElement(
           _reactNative.View,
-          { style: styles.palco, __source: {
+          { style: _estilo.Estilo.palco, __source: {
               fileName: _jsxFileName,
-              lineNumber: 53
+              lineNumber: 56
             }
           },
           _react2.default.createElement(
             _reactNative.Text,
-            { style: styles.txtResultado, __source: {
+            { style: _estilo.Estilo.txtResultado, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 54
+                lineNumber: 57
               }
             },
             ' ',
             this.state.resultado
           ),
-          _react2.default.createElement(Icone, { escolha: this.state.escolhaMaquina, jogador: 'Computador', __source: {
+          _react2.default.createElement(_icone2.default, { escolha: this.state.escolhaMaquina, jogador: 'Computador', __source: {
               fileName: _jsxFileName,
               lineNumber: 58
             }
           }),
-          _react2.default.createElement(Icone, { escolha: this.state.escolhaUsuario, jogador: 'Minha escolha', __source: {
+          _react2.default.createElement(_icone2.default, { escolha: this.state.escolhaUsuario, jogador: 'Minha escolha', __source: {
               fileName: _jsxFileName,
               lineNumber: 59
             }
@@ -1386,108 +1396,6 @@ var appUdemy03 = function (_Component) {
 
 exports.default = appUdemy03;
 
-var Topo = function (_Component2) {
-  babelHelpers.inherits(Topo, _Component2);
-
-  function Topo() {
-    babelHelpers.classCallCheck(this, Topo);
-    return babelHelpers.possibleConstructorReturn(this, (Topo.__proto__ || Object.getPrototypeOf(Topo)).apply(this, arguments));
-  }
-
-  babelHelpers.createClass(Topo, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        _reactNative.View,
-        {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 70
-          }
-        },
-        _react2.default.createElement(_reactNative.Image, { source: require(416                 ), __source: { // 416 = ./imgs/jokenpo.png
-            fileName: _jsxFileName,
-            lineNumber: 71
-          }
-        })
-      );
-    }
-  }]);
-  return Topo;
-}(_react.Component);
-
-var Icone = function (_Component3) {
-  babelHelpers.inherits(Icone, _Component3);
-
-  function Icone() {
-    babelHelpers.classCallCheck(this, Icone);
-    return babelHelpers.possibleConstructorReturn(this, (Icone.__proto__ || Object.getPrototypeOf(Icone)).apply(this, arguments));
-  }
-
-  babelHelpers.createClass(Icone, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        _reactNative.View,
-        { style: styles.palco, __source: {
-            fileName: _jsxFileName,
-            lineNumber: 79
-          }
-        },
-        _react2.default.createElement(
-          _reactNative.Text,
-          {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 80
-            }
-          },
-          ' Escolha do ',
-          this.props.jogador,
-          ': ',
-          this.props.escolha
-        ),
-        this.props.escolha == 'Papel' && _react2.default.createElement(_reactNative.Image, { source: require(420               ), __source: { // 420 = ./imgs/Papel.png
-            fileName: _jsxFileName,
-            lineNumber: 82
-          }
-        }),
-        this.props.escolha == 'Pedra' && _react2.default.createElement(_reactNative.Image, { source: require(421               ), __source: { // 421 = ./imgs/Pedra.png
-            fileName: _jsxFileName,
-            lineNumber: 85
-          }
-        }),
-        this.props.escolha == 'Tesoura' && _react2.default.createElement(_reactNative.Image, { source: require(422                 ), __source: { // 422 = ./imgs/Tesoura.png
-            fileName: _jsxFileName,
-            lineNumber: 88
-          }
-        })
-      );
-    }
-  }]);
-  return Icone;
-}(_react.Component);
-
-var styles = _reactNative.StyleSheet.create({
-  btnEscolha: {
-    width: 90
-  },
-  painelAcao: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    margin: 10
-  },
-  palco: {
-    alignItems: 'center',
-    marginTop: 20
-  },
-  txtResultado: {
-    fontSize: 25,
-    fontWeight: 'bold',
-    color: 'red',
-    height: 60
-  }
-});
 var compare = function compare(choice1, choice2) {
   if (choice1 === choice2) return "O resultado é um empate!";else if (choice1 === "Pedra") {
     if (choice2 === "Tesoura") return "pedra vence";else {
@@ -4194,6 +4102,49 @@ function onlyChild(children) {
 
 module.exports = onlyChild;
 }, 44, null, "react/lib/onlyChild.js");
+__d(/* appUdemy03/src/components/topo.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var _jsxFileName = '/home/cogitae/reactProjects/appUdemy03/src/components/topo.js';
+
+var _react = require(12     ); // 12 = react
+
+var _react2 = babelHelpers.interopRequireDefault(_react);
+
+var _reactNative = require(45            ); // 45 = react-native
+
+var Topo = function (_Component) {
+    babelHelpers.inherits(Topo, _Component);
+
+    function Topo() {
+        babelHelpers.classCallCheck(this, Topo);
+        return babelHelpers.possibleConstructorReturn(this, (Topo.__proto__ || Object.getPrototypeOf(Topo)).apply(this, arguments));
+    }
+
+    babelHelpers.createClass(Topo, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                _reactNative.View,
+                {
+                    __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 7
+                    }
+                },
+                _react2.default.createElement(_reactNative.Image, { source: require(416                     ), __source: { // 416 = ../../imgs/jokenpo.png
+                        fileName: _jsxFileName,
+                        lineNumber: 8
+                    }
+                })
+            );
+        }
+    }]);
+    return Topo;
+}(_react.Component);
+
+exports.default = Topo;
+}, 423, null, "appUdemy03/src/components/topo.js");
 __d(/* react-native-implementation */function(global, require, module, exports) {
 'use strict';
 
@@ -47931,6 +47882,106 @@ module.exports = throwOnWrongReactAPI;
 }, 415, null, "throwOnWrongReactAPI");
 __d(/* appUdemy03/imgs/jokenpo.png */function(global, require, module, exports) {module.exports = require(277                                         ).registerAsset({"__packager_asset":true,"httpServerLocation":"/assets/imgs","width":397,"height":194,"scales":[1],"hash":"212fa0fcb28aa581cd80219d7620db0c","name":"jokenpo","type":"png"}); // 277 = react-native/Libraries/Image/AssetRegistry
 }, 416, null, "appUdemy03/imgs/jokenpo.png");
+__d(/* appUdemy03/src/components/icone.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var _jsxFileName = '/home/cogitae/reactProjects/appUdemy03/src/components/icone.js';
+
+var _react = require(12     ); // 12 = react
+
+var _react2 = babelHelpers.interopRequireDefault(_react);
+
+var _reactNative = require(45            ); // 45 = react-native
+
+var _estilo = require(425               ); // 425 = ../styles/estilo
+
+var Icone = function (_Component) {
+    babelHelpers.inherits(Icone, _Component);
+
+    function Icone() {
+        babelHelpers.classCallCheck(this, Icone);
+        return babelHelpers.possibleConstructorReturn(this, (Icone.__proto__ || Object.getPrototypeOf(Icone)).apply(this, arguments));
+    }
+
+    babelHelpers.createClass(Icone, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                _reactNative.View,
+                { style: _estilo.Estilo.palco, __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 7
+                    }
+                },
+                _react2.default.createElement(
+                    _reactNative.Text,
+                    {
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 8
+                        }
+                    },
+                    'Escolha do ',
+                    this.props.jogador,
+                    ': ',
+                    this.props.escolha,
+                    ' '
+                ),
+                this.props.escolha == 'Papel' && _react2.default.createElement(_reactNative.Image, { source: require(420                   ), __source: { // 420 = ../../imgs/Papel.png
+                        fileName: _jsxFileName,
+                        lineNumber: 11
+                    }
+                }),
+                this.props.escolha == 'Pedra' && _react2.default.createElement(_reactNative.Image, { source: require(421                   ), __source: { // 421 = ../../imgs/Pedra.png
+                        fileName: _jsxFileName,
+                        lineNumber: 15
+                    }
+                }),
+                this.props.escolha == 'Tesoura' && _react2.default.createElement(_reactNative.Image, { source: require(422                     ), __source: { // 422 = ../../imgs/Tesoura.png
+                        fileName: _jsxFileName,
+                        lineNumber: 19
+                    }
+                })
+            );
+        }
+    }]);
+    return Icone;
+}(_react.Component);
+
+exports.default = Icone;
+}, 424, null, "appUdemy03/src/components/icone.js");
+__d(/* appUdemy03/src/styles/estilo.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Estilo = undefined;
+
+var _react = require(12     ); // 12 = react
+
+var _react2 = babelHelpers.interopRequireDefault(_react);
+
+var _reactNative = require(45            ); // 45 = react-native
+
+var Estilo = exports.Estilo = _reactNative.StyleSheet.create({
+  btnEscolha: {
+    width: 90
+  },
+  painelAcao: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    margin: 10
+  },
+  palco: {
+    alignItems: 'center',
+    marginTop: 20
+  },
+  txtResultado: {
+    fontSize: 25,
+    fontWeight: 'bold',
+    color: 'red',
+    height: 60
+  }
+});
+}, 425, null, "appUdemy03/src/styles/estilo.js");
 __d(/* appUdemy03/imgs/Papel.png */function(global, require, module, exports) {module.exports = require(277                                         ).registerAsset({"__packager_asset":true,"httpServerLocation":"/assets/imgs","width":75,"height":75,"scales":[1],"hash":"87eafed9479b2b9e0f10f9bfed292598","name":"Papel","type":"png"}); // 277 = react-native/Libraries/Image/AssetRegistry
 }, 420, null, "appUdemy03/imgs/Papel.png");
 __d(/* appUdemy03/imgs/Pedra.png */function(global, require, module, exports) {module.exports = require(277                                         ).registerAsset({"__packager_asset":true,"httpServerLocation":"/assets/imgs","width":75,"height":75,"scales":[1],"hash":"38142cafc551edac8454aa0753009c14","name":"Pedra","type":"png"}); // 277 = react-native/Libraries/Image/AssetRegistry

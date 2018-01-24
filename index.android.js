@@ -5,6 +5,9 @@
  */
 
 import React, { Component } from 'react';
+import Topo from './src/components/topo';
+import Icone from './src/components/icone';
+import {Estilo} from './src/styles/estilo'
 import {
   AppRegistry,
   StyleSheet,
@@ -39,78 +42,48 @@ export default class appUdemy03 extends Component {
     return (
       <View>
         <Topo></Topo>
-        <View style={styles.painelAcao}>
-        <View style={styles.btnEscolha}>
+        <View style={Estilo.painelAcao}>
+        <View style={Estilo.btnEscolha}>
           <Button onPress={() => { this.jokenpo('0') }} title="Pedra" />
         </View>
-        <View style={styles.btnEscolha}>
+        <View style={Estilo.btnEscolha}>
           <Button onPress={() => { this.jokenpo('1') }} title="Papel" />
         </View>
-        <View style={styles.btnEscolha}>
+        <View style={Estilo.btnEscolha}>
           <Button onPress={() => { this.jokenpo('2') }} title="Tesoura" />
         </View>
       </View>
-        <View style={styles.palco}>
-        <Text style={styles.txtResultado}> {this.state.resultado}</Text>
-        
-        {/* <Text> Escolha do computador: {this.state.escolhaMaquina}</Text>
-        <Image source={require('./imgs/tesoura.png')} /> */}
+        <View style={Estilo.palco}>
+        <Text style={Estilo.txtResultado}> {this.state.resultado}</Text>
         <Icone escolha={this.state.escolhaMaquina} jogador='Computador' ></Icone>
         <Icone escolha={this.state.escolhaUsuario} jogador='Minha escolha' ></Icone>
-        {/* <Text> Minha escolha: {this.state.escolhaUsuario}</Text>
-        <Image source={require('./imgs/tesoura.png')} /> */}
         </View>
       </View>
     );
   }
 }
-class Topo extends Component {
-  render() {
-    return (
-      <View>
-        <Image source={require('./imgs/jokenpo.png')} />
-      </View>
-    )
-  }
-}
-class Icone extends Component {
-  render() {
-    return (
-      <View style={styles.palco}>
-        <Text> Escolha do {this.props.jogador}: {this.props.escolha}</Text>
-        {this.props.escolha == 'Papel' &&
-          <Image source={require('./imgs/Papel.png')} />
-        }
-        {this.props.escolha == 'Pedra' &&
-          <Image source={require('./imgs/Pedra.png')} />
-        }
-        {this.props.escolha == 'Tesoura' &&
-          <Image source={require('./imgs/Tesoura.png')} />
-        }
-      </View>
-    )
-  }
-}
-const styles = StyleSheet.create({
-  btnEscolha: {
-    width: 90
-  },
-  painelAcao: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    margin: 10,
-  },
-  palco: {
-    alignItems: 'center',
-    marginTop: 20,
-  },
-  txtResultado: {
-    fontSize: 25,
-    fontWeight: 'bold',
-    color:'red',
-    height:60
-  }
-})
+
+
+// const styles = StyleSheet.create({
+//   btnEscolha: {
+//     width: 90
+//   },
+//   painelAcao: {
+//     flexDirection: 'row',
+//     justifyContent: 'space-between',
+//     margin: 10,
+//   },
+//   palco: {
+//     alignItems: 'center',
+//     marginTop: 20,
+//   },
+//   txtResultado: {
+//     fontSize: 25,
+//     fontWeight: 'bold',
+//     color:'red',
+//     height:60
+//   }
+// })
 var compare = function (choice1, choice2) {
   if (choice1 === choice2)
     return ("O resultado é um empate!")
